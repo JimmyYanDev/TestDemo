@@ -58,6 +58,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 Intent phoneCardTestIntent = new Intent(MainActivity.this, PhoneCardTestActivity.class);
                 startActivity(phoneCardTestIntent);
                 break;
+            case 3:
+                Intent vibratorTestIntent = new Intent(MainActivity.this, VibratorTestActiity.class);
+                startActivity(vibratorTestIntent);
+                break;
             default:
                 Toast.makeText(this, "开发中...", Toast.LENGTH_SHORT).show();
                 break;

@@ -4,6 +4,8 @@
 
     <!--同意读取电话状态SIM的权限-->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!--震动权限-->
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
         android:allowBackup="true"
@@ -21,7 +23,8 @@
         </activity>
         <activity android:name=".ProximityTestActivity" />
         <activity android:name=".GetSystemPropertyActivity" />
-        <activity android:name=".PhoneCardTestActivity"></activity>
+        <activity android:name=".PhoneCardTestActivity" />
+        <activity android:name=".VibratorTestActiity" />
     </application>
 
 </manifest>

@@ -9,20 +9,23 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+/**
+ * 首页Activity
+ *
+ * @author michealyan
+ * email: yanqinming@hymost.com
+ * created at 2018/3/30 11:17
+ */
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
-
-    private ListView mListView;
-    private ArrayAdapter<String> mArrayAdapter;
-    private String[] mListViewItems;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mListView = findViewById(R.id.list_view);
-        mListViewItems = getResources().getStringArray(R.array.MainListViewItems);
-        mArrayAdapter = new ArrayAdapter<>(MainActivity.this
+        ListView mListView = findViewById(R.id.list_view);
+        String[] mListViewItems = getResources().getStringArray(R.array.MainListViewItems);
+        ArrayAdapter<String> mArrayAdapter = new ArrayAdapter<>(MainActivity.this
                 , android.R.layout.simple_list_item_1
                 , mListViewItems
         );
@@ -51,7 +54,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 Intent getSystemPropertyIntent = new Intent(MainActivity.this, GetSystemPropertyActivity.class);
                 startActivity(getSystemPropertyIntent);
                 break;
+            case 2:
+                Intent phoneCardTestIntent = new Intent(MainActivity.this, PhoneCardTestActivity.class);
+                startActivity(phoneCardTestIntent);
+                break;
             default:
+                Toast.makeText(this, "开发中...", Toast.LENGTH_SHORT).show();
                 break;
         }
     }

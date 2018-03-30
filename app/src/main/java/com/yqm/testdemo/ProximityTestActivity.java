@@ -9,6 +9,13 @@ import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+/**
+ * 距离感应测试Activity
+ *
+ * @author michealyan
+ * email: yanqinming@hymost.com
+ * created at 2018/3/30 11:17
+ */
 public class ProximityTestActivity extends AppCompatActivity {
 
     private ConstraintLayout mConstraintLayout;
@@ -24,7 +31,7 @@ public class ProximityTestActivity extends AppCompatActivity {
 
         setTitle("距离感应测试");
         mConstraintLayout = findViewById(R.id.constraint_layout);
-        mSensorManager = (SensorManager) getSystemService("sensor");
+        mSensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         mProximitySensor = mSensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
         mProximitySensorEventListener = new SensorEventListener() {
             @Override

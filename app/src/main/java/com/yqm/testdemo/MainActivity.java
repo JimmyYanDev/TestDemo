@@ -66,6 +66,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 Intent keyTestIntent = new Intent(MainActivity.this, KeyTestActivity.class);
                 startActivity(keyTestIntent);
                 break;
+            case 5:
+                Intent execShellCmdTestIntent = new Intent(MainActivity.this, ExecShellCmdTestActivity.class);
+                startActivity(execShellCmdTestIntent);
+                break;
+            case 6:
+                Intent gpsTestIntent = new Intent(MainActivity.this, GpsTestActivity.class);
+                startActivity(gpsTestIntent);
+                break;
             default:
                 Toast.makeText(this, "开发中...", Toast.LENGTH_SHORT).show();
                 break;

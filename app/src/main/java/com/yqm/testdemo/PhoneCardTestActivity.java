@@ -2,10 +2,10 @@ package com.yqm.testdemo;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
-import android.os.Build;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
+import android.support.v7.app.AppCompatActivity;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.widget.TextView;
@@ -34,12 +34,10 @@ public class PhoneCardTestActivity extends AppCompatActivity {
         mResultTextView = findViewById(R.id.tv_result);
 
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (checkSelfPermission(Manifest.permission.READ_PHONE_STATE) == PackageManager.PERMISSION_DENIED) {
-                requestPermissions(new String[]{Manifest.permission.READ_PHONE_STATE}, REQUEST_FOR_READ_PHONE_STATE_PERMISSION);
-            } else {
-                showPhoneCardInfo();
-            }
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE) == PackageManager.PERMISSION_DENIED) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_PHONE_STATE}, REQUEST_FOR_READ_PHONE_STATE_PERMISSION);
+        } else {
+            showPhoneCardInfo();
         }
 
     }

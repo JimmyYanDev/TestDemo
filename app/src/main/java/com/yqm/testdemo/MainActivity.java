@@ -62,6 +62,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 Intent vibratorTestIntent = new Intent(MainActivity.this, VibratorTestActiity.class);
                 startActivity(vibratorTestIntent);
                 break;
+            case 4:
+                Intent keyTestIntent = new Intent(MainActivity.this, KeyTestActivity.class);
+                startActivity(keyTestIntent);
+                break;
             default:
                 Toast.makeText(this, "开发中...", Toast.LENGTH_SHORT).show();
                 break;

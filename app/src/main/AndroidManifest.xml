@@ -2,9 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.yqm.testdemo">
 
-    <!--同意读取电话状态SIM的权限-->
+    <!-- 同意读取电话状态SIM的权限 -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <!--震动权限-->
+    <!-- 震动权限 -->
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
@@ -25,6 +25,7 @@
         <activity android:name=".GetSystemPropertyActivity" />
         <activity android:name=".PhoneCardTestActivity" />
         <activity android:name=".VibratorTestActiity" />
+        <activity android:name=".KeyTestActivity"></activity>
     </application>
 
 </manifest>

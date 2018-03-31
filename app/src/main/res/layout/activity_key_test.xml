@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".KeyTestActivity">
+
+    <TextView
+        android:padding="10dp"
+        android:id="@+id/tv_power_key"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="电源键" />
+
+    <TextView
+        android:padding="10dp"
+        android:id="@+id/tv_volume_up_key"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="音量上键" />
+
+    <TextView
+        android:padding="10dp"
+        android:id="@+id/tv_volume_down_key"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="音量下键" />
+
+
+</LinearLayout>
